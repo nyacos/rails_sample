@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'boards/index'
-  get 'boards/new'
-  get 'boards/show'
-  get 'boards/edit'
+  root 'post#index'
   resources :posts
-  root :to => 'posts#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :boards
 end
