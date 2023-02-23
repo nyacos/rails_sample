@@ -6,17 +6,17 @@ class BoardsController < ApplicationController
 
   def new
     # Boardの新規作成画面ではBoardのからのインスタンスをViewに渡したい
-    @boards = Board.new
+    @board = Board.new
   end
 
   def show
     # Boardの詳細画面ではURLパラメーターから取得したBoardのインスタンスが必要
-    @boards = Board.find(params[:id])
+    @board = Board.find(params[:id])
   end
 
   def edit
     # Boardの編集画面ではURLパラメーターから取得したBoardのインスタンスが必要
-    @boards = Board.find(params[:id])
+    @board = Board.find(params[:id])
   end
 
   def create
