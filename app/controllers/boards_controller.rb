@@ -35,7 +35,7 @@ class BoardsController < ApplicationController
 
   def update
     # 編集対象のBoardインスタンスが必要
-    @board = Board.find(params:[id])
+    @board = Board.find(params:[:id])
 
     # ActionRecordのupdateメソッドを実行して結果によって処理を分岐させたい
     if @board.update(board_params)
@@ -49,7 +49,7 @@ class BoardsController < ApplicationController
 
   def destroy
     # 削除対象Boardインスタンスが必要
-    @board = Board.find(params[id])
+    @board = Board.find(params[:id])
 
     # ActiveRecordのdestoyメソッドを実行
     @board.destroy
